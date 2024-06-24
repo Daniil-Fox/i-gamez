@@ -1,0 +1,122 @@
+.econom {
+  padding: 8rem 0;
+  background-color: #100e28;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 5rem 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 120rem;
+    height: 120rem;
+    background: radial-gradient(#182b34 10%, transparent 60%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: -40rem;
+    transform: translateY(-50%);
+    width: 200rem;
+    height: 200rem;
+    background: radial-gradient(#211046 10%, transparent 60%);
+
+    opacity: 0.6;
+  }
+  &__title {
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 3;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: 3;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @include small-tablet {
+      display: block;
+    }
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    padding: 10rem 7rem;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1 / 1;
+
+    @include tablet {
+      width: 45%;
+    }
+    @include small-tablet {
+      width: 100%;
+      padding: 9.5rem 5rem;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 0 3rem rgba(#fff, 0.1));
+    }
+  }
+  &__progress {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    border-radius: 10rem;
+  }
+  &__capture {
+    font-size: 2.6rem;
+    color: #fff;
+    line-height: 1.231;
+    text-align: center;
+
+    @include small-tablet {
+      font-size: 1.8rem;
+    }
+  }
+  &__desc {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.313;
+    text-align: center;
+
+    @include small-tablet {
+      font-size: 1.4rem;
+    }
+  }
+}

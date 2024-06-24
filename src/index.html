@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/figures.html')
+      @include('partials/equip.html')
+      @include('partials/clubs.html')
+      @include('partials/econom.html')
+      @include('partials/partners.html')
+      @include('partials/socials.html')
+      @include('partials/seo.html')
+      @include('partials/modal.html')
+
+
+
+
+
+      <div class="hero__socials">
+        <div class="soc-win">
+          <div class="soc-win__header">
+            Подписывайся на нас
+            в Telegram и Youtube
+          </div>
+          <div class="soc-win__body">
+            <a href="#" class="soc-win__item">
+              <div class="soc-win__image">
+                <img src="https://via.assets.so/img.jpg?w=600&h=450" alt="">
+              </div>
+              <span class="soc-win__link soc-win__link--tg">
+                <img src="./img/tg.png" alt="">
+                Перейти в телеграм канал
+              </span>
+            </a>
+            <a href="#" class="soc-win__item">
+              <div class="soc-win__image">
+                <img src="https://via.assets.so/img.jpg?w=600&h=450" alt="">
+              </div>
+              <span class="soc-win__link soc-win__link--youtube">
+                <img src="./img/youtube.png" alt="">
+                Перейти в телеграм канал
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-btn">
+          <div class="hero__buttons">
+            <span class="hero__link hero__youtube">
+              <img src="./img/youtube.png" alt="">
+            </span>
+            <span class="hero__link hero__youtube">
+              <img src="./img/tg2.png" alt="">
+            </span>
+          </div>
+          <div class="hero__close">
+            <img src="./img/close.png" alt="">
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

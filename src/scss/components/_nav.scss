@@ -1,0 +1,42 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+
+    transition: .2s ease-out;
+  }
+
+  &__link, &__item {
+    font-size: 1.8rem;
+    font-family: "Exo2";
+    color: rgb(6, 8, 23);
+    line-height: 1.222;
+    font-weight: 500;
+  }
+  &__item {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 10%;
+      opacity: 0;
+      height: .1rem;
+      background-color: currentColor;
+      transition: .3s ease-out;
+    }
+
+    @include hover {
+      &::before {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+  transition: .2s ease-out;
+}

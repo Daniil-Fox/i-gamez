@@ -1,0 +1,43 @@
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background-color: #17162c;
+
+  display: none;
+  transition: transform .3s ease-out;
+  transform: translateX(100%);
+
+  &.active {
+    transform: translateX(0);
+  }
+  &__body {
+    padding: 5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  @include tablet {
+    display: block;
+  }
+  .footer__col {
+    align-items: center;
+    text-align: center;
+  }
+  .footer__container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .footer__nav .nav__list {
+    align-items: center;
+    gap: 2rem;
+  }
+}

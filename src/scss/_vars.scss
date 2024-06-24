@@ -1,0 +1,13 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Exo2", sans-serif;
+  --content-width: 128rem;
+  --container-offset: 2rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --text-color: rgb(6, 8, 23);
+}

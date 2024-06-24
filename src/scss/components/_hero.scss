@@ -1,0 +1,403 @@
+.hero {
+  padding-top: 7.5rem;
+  padding-bottom: 9rem;
+
+  background-image: url('./../img/back.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  @include tablet {
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+  }
+  @include small-tablet {
+    padding: 2.5rem 0 1.5rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(.8rem);
+  }
+  &__man {
+    position: absolute;
+    z-index: 5;
+    right: 6rem;
+    bottom: 0;
+    width: 89rem;
+    height: 78rem;
+    padding: 3rem 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include tablet {
+      width: 60rem;
+      height: 50rem;
+      right: -10rem;
+    }
+
+    @include small-tablet {
+      height: 43rem;
+      width: 50rem;
+      right: -23rem;
+      bottom: 0;
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: -3rem;
+    width: 100%;
+    height: 100%;
+
+    @include small-tablet {
+      bottom: -1rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 5rem;
+    font-size: 4.8rem;
+    font-family: "Exo2";
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.292;
+
+    @include tablet {
+      font-size: 3.6rem;
+      margin-bottom: 3rem;
+    }
+
+    @include small-tablet {
+      font-size: 2rem;
+      max-width: 27.6rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__desc {
+    margin: 0;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-family: "Exo2";
+    color: #fff;
+    line-height: 1.2;
+
+    @include small-tablet {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      max-width: 22rem;
+    }
+  }
+  &__content {
+    max-width: 71rem;
+    position: relative;
+    z-index: 10;
+
+    @include tablet {
+      max-width: 62rem;
+    }
+
+
+  }
+  &__list {
+    margin-bottom: 5rem;
+
+    @include small-tablet {
+      max-width: 22rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__item {
+    font-size: 1.9rem;
+    font-family: "Exo2";
+    color: #fff;
+    line-height: 1.242;
+    padding-left: 1.8rem;
+    position: relative;
+    @include small-tablet {
+      font-size: 1.2rem;
+    }
+    &:not(:last-child){
+      margin-bottom: 3rem;
+
+      @include small-tablet {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0.9rem;
+      height: 0.9rem;
+      background: linear-gradient(45deg, #d83ce4, #7919f5);
+    }
+  }
+  &__name {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+    color: rgb(254, 254, 254);
+    line-height: 1.2;
+    text-align: center;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+  &__capture {
+    display: block;
+    font-size: 1.8427rem;
+    color: rgb(254, 254, 254);
+    line-height: 1.2;
+    text-align: center;
+    @include tablet {
+      font-size: 1.6rem;
+    }
+  }
+  &__bottom {
+    position: relative;
+    z-index: 6;
+    gap: 2rem;
+    max-width: 43rem;
+    background-color: #120139;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 3rem #7919f5;
+
+    @include tablet {
+      max-width: 45rem;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+  &__socials {
+    position: fixed;
+    z-index: 100;
+    bottom: 3rem;
+    right: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 100%;
+    background-color: #fff;
+
+    padding: 1.5rem;
+    box-shadow: 0 0 3rem #681ff0;
+
+    @include tablet {
+      right: 3rem;
+    }
+    @include small-tablet {
+      right: 1rem;
+      bottom: 1rem;
+      width: 4rem;
+      height: 4rem;
+      padding: 0.5rem;
+    }
+  }
+  &__link {
+    flex: 1;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__buttons {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+
+
+    transition: width .3s ease-out, height .3s ease-out;
+
+    @include small-tablet {
+      gap: .5rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 4;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #cfcfcf;
+      width: 1px;
+      height: 5rem;
+
+      @include small-tablet {
+        height: 3rem;
+      }
+    }
+  }
+  &__btn {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: linear-gradient(240deg, #7919f5, #d83ce4);
+    box-shadow: 0 0 3rem #d83ce4;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    @include small-tablet {
+      font-size: 1.6rem;
+      padding: 0.9rem 1.2rem;
+    }
+  }
+
+
+  &__close {
+    transition: width .3s ease-out, height .3s ease-out;
+    width: 0;
+    height: 0;
+  }
+
+
+  &__socials.active {
+    .hero__buttons {
+      width: 0rem;
+      height: 0rem;
+      &::before {
+        display: none;
+      }
+    }
+    .hero__close {
+      width: 2.4rem;
+      height: 2.4rem;
+
+      @include small-tablet {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+    .soc-win {
+      transform: scale(1) translate(0%, -100%);
+    }
+  }
+}
+
+
+.soc-win {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  transition: transform .5s ease-out;
+  width: 32rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transform: scale(0) translate(0%, -150%);
+
+
+  @include small-tablet {
+    width: 23rem;
+  }
+  &__header {
+    padding: 1.2rem;
+    background: linear-gradient(-45deg, #7919f5, #d83ce4);
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+
+    @include small-tablet {
+      padding: 1rem .5rem;
+      font-size: 1.2rem;
+    }
+  }
+  &__body {
+    padding: 1.2rem;
+    max-height: 45vh;
+    height: 45rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+
+    @include small-tablet {
+      height: 30rem;
+      padding: 1rem;
+    }
+  }
+  &__item {
+    display: block;
+    &:not(:last-child){
+      margin-bottom: 2rem;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 16rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include small-tablet {
+      height: 12rem;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.4rem;
+    text-decoration: underline;
+
+    @include small-tablet {
+      font-size: 1rem;
+    }
+    &--tg {
+      color: #009CE8;
+    }
+    &--youtube {
+      color: #FF0000;
+    }
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      overflow: hidden;
+      border-radius: 100%;
+      @include small-tablet {
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+      }
+    }
+  }
+
+}
+.hero-btn {
+  cursor: pointer;
+}

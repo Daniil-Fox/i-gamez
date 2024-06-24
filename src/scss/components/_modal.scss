@@ -1,0 +1,100 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  background-color: rgba(#000, 0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s ease-out, z-index .3s ease-out;
+  &.active {
+    opacity: 1;
+    z-index: 9999;
+  }
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+
+    width: 2rem;
+    height: 2rem;
+
+    cursor: pointer;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #000;
+    }
+  }
+  &__body {
+    position: relative;
+    background-color: #fff;
+    padding: 5rem;
+    border-radius: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__left {
+    max-width: 40rem;
+  }
+  &__title {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  &__image {
+    width: 30rem;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.modal-form {
+  &__area {
+    display: block;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    height: 15rem;
+    resize: none;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+
+    padding: 0.8rem;
+    font-size: 1.6rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__input {
+    display: block;
+    height: 6rem;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    font-size: 1.6rem;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__btn {
+    font-size: 1.6rem;
+  }
+
+}

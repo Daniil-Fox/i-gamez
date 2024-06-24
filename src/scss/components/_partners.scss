@@ -1,0 +1,136 @@
+.partners {
+  padding: 12rem 0;
+  @include tablet {
+    padding: 5rem 0;
+  }
+  &__header {
+    max-width: 60rem;
+    margin-bottom: 5rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}
+
+.partners-item {
+  grid-column: 2 span;
+  background-color: #fff;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: flex;
+
+  box-shadow: 0 0 3rem rgba(#1e2694, 0.3);
+
+  @include small-tablet {
+    grid-column: 1 span;
+    flex-direction: column;
+  }
+  &__image {
+    width: 18rem;
+    flex-shrink: 0;
+    background-color: #fff;
+    @include small-tablet {
+      width: 100%;
+      height: 18rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    padding: 2rem 4rem;
+
+    @include small-tablet {
+      padding: 1.5rem;
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    time {
+      font-size: 1.2rem;
+      color: rgb(121, 121, 121);
+      line-height: 1.75;
+
+    }
+  }
+  &__logo {
+    height: 2.5rem;
+    width: 12rem;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    color: rgb(6, 8, 23);
+    line-height: 1.312;
+  }
+  &__link {
+    font-size: 1.6rem;
+    line-height: 1.313;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    span {
+      background: linear-gradient(45deg, #d83ce4, #7e1bf4);
+      background-clip: text;
+    }
+  }
+}
+
+.partners-item--big {
+  grid-row: 2 span;
+
+  .partners-item {
+    &__image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      @include small-tablet {
+        position: static;
+        height: 18rem;
+      }
+    }
+
+    &__body {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      padding: 1.5rem;
+      width: 50%;
+
+      @include small-tablet {
+        position: static;
+        width: 100%;
+      }
+    }
+
+
+  }
+}

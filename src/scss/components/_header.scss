@@ -1,0 +1,259 @@
+.header {
+  padding: 2rem 0;
+  padding-top: 0;
+  background-color: #fff;
+  transition: opacity .2s ease-out;
+
+  @include tablet {
+    padding: 0;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+  }
+
+  &__logo {
+    width: 16rem;
+    height: 3rem;
+    flex-shrink: 0;
+    @include small-tablet {
+      width: 8.5rem;
+      height: 2rem;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__top {
+    padding: 2rem 0;
+    padding-top: 4rem;
+    position: relative;
+    @include small-tablet {
+      padding-top: 1.5rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 90rem;
+      height: 2px;
+      transform: translateX(-50%);
+      background: linear-gradient(to right, transparent 0%, #c439e8, #4850e5, #71f3f9, transparent 100%);
+    }
+  }
+  &__left {
+    display: flex;
+    gap: 4rem;
+
+    @include tablet {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    @include small-tablet {
+      gap: 1rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: "Exo2";
+    color: rgb(6, 8, 23);
+    line-height: 1.375;
+    max-width: 42rem;
+    font-weight: 600;
+
+    @include tablet {
+      max-width: 35rem;
+    }
+
+    @include small-tablet {
+      font-size: 1.375rem;
+      max-width: 20rem;
+    }
+  }
+
+  &__tg {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    border: 2px solid #69d0f5;
+    box-shadow: 0 0 1.8rem #69d0f5;
+
+    @include hover {
+      text-decoration: underline;
+    }
+    span {
+      font-size: 1.4rem;
+      font-family: "Exo2";
+      color: rgb(6, 8, 23);
+      line-height: 1.571;
+    }
+
+    img {
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__cta {
+    padding: 1.5rem 2rem;
+    background-color: #4de681;
+    border-radius: 1rem;
+
+    font-size: 1.4rem;
+    font-family: "Exo2";
+    color: rgb(6, 8, 23);
+    line-height: 1.571;
+    text-align: center;
+    box-shadow: 0 0 1.8rem #4de681;
+    font-weight: 600;
+
+    transition: color .3s ease-out;
+    @include hover {
+      color: #fff;
+    }
+    @include small-tablet {
+      width: 80%;
+    }
+    @include small-tablet {
+      width: 100%;
+      max-width: 28.1rem;
+      font-size: 1.2rem;
+      padding: 1rem 3rem;
+    }
+  }
+  &__burger {
+    display: none;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 1.5rem;
+    height: 1.2rem;
+    z-index: 1000;
+    @include tablet {
+      display: flex;
+    }
+
+
+    .line {
+      width: 100%;
+      height: 0.2rem;
+      flex-shrink: 0;
+      background: linear-gradient(to right, #df5de9, #b34df0);
+      transition: transform .3s ease-out;
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        flex-shrink: 0;
+        left: 0;
+        height: .2rem;
+        width: 100%;
+        background: linear-gradient(to right, #df5de9, #b34df0);
+      }
+
+      &::before {
+        top: 0;
+        transition: opacity .3s ease-out;
+      }
+      &::after {
+        bottom: 0;
+        transition: transform .3s ease-out;
+      }
+    }
+
+    &.active {
+      .line {
+        transform: rotate(45deg);
+
+        &::before {
+          opacity: 0;
+        }
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+
+    }
+  }
+  &__nav {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+
+.header.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 990;
+
+  .nav__item:nth-child(n + 5){
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+  .header__tg {
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+  .header__desc {
+    display: none;
+  }
+  .header__top::after {
+    bottom: 0.7rem;
+
+    @include tablet {
+      bottom: 0;
+    }
+  }
+  .nav {
+    margin-top: -8.5rem;
+    @include tablet {
+      margin: 0;
+    }
+    &__list {
+      justify-content: flex-start;
+      margin-left: 50rem;
+      gap: 5rem;
+
+      @include tablet {
+        margin: 0;
+      }
+    }
+  }
+}
