@@ -24,7 +24,10 @@ const modalBody = modal.querySelector('.modal__body')
 const modalClose = modal.querySelector('.modal__close')
 
 modalButtons.forEach(btn => {
+  const textForInput = btn.dataset.text || "Привет! Хочу записаться на онлайн-консультацию."
+  const areaModal = modal.querySelector('textarea')
   btn.addEventListener('click', e => {
+    areaModal.textContent = textForInput
     modal.classList.add('active')
   })
 })
@@ -41,9 +44,17 @@ modalBody.addEventListener('click', e => {
 
 
 const menu = document.querySelector('.menu')
+const menuLinks = menu.querySelectorAll('.nav__link')
 const menuBtn = document.querySelector('.header__burger')
 
 menuBtn.addEventListener('click', e => {
   menuBtn.classList.toggle('active')
   menu.classList.toggle('active')
+})
+
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    menu.classList.remove('active')
+  })
 })

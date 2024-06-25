@@ -47,7 +47,7 @@
         <img src="./img/tg.png" alt="">
         <span>Написать в телеграм</span>
       </a>
-      <a href="#!" class="header__cta modal-btn">
+      <a href="#!" class="header__cta modal-btn" data-text="Привет! Хочу записаться на онлайн-консультацию.">
         Записаться на консультацию со мной
       </a>
     </div>
@@ -78,19 +78,19 @@
       <nav class="footer__nav nav">
         <ul class="list-reset nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link">Меню</a>
+            <a class="nav__link">Меню</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Продукты</a>
+            <a href="#products" class="nav__link">Продукты</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Кейсы</a>
+            <a href="#cases" class="nav__link">Кейсы</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">О компании</a>
+            <a href="#about" class="nav__link">О компании</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Контакты</a>
+            <a href="#contacts" class="nav__link">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -129,16 +129,16 @@
   <nav class="header__nav nav">
     <ul class="list-reset nav__list">
       <li class="nav__item">
-        <a href="#" class="nav__link">Продукты</a>
+        <a href="#products" class="nav__link">Продукты</a>
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link">Кейсы</a>
+        <a href="#cases" class="nav__link">Кейсы</a>
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link">О компании</a>
+        <a href="#about" class="nav__link">О компании</a>
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link">Контакты</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
       </li>
     </ul>
   </nav>
@@ -163,7 +163,7 @@
         <li class="hero__item">Как понять, что в моем городе «зайдет» кибер-клуб</li>
         <li class="hero__item">Как определить концепцию для клуба, чтобы быстрее окупить вложения</li>
       </ul>
-      <a href="#" class="hero__btn glow-on-hover">Записаться на онлайн-экскурсию</a>
+      <button class="btn-reset hero__btn glow-on-hover modal-btn" data-text="Привет! Хочу записаться на онлайн-экскурсию по этапам открытия компьютерного клуба, и просчитать стоимость оборудования.">Записаться на онлайн-экскурсию</button>
     </div>
   </div>
 
@@ -181,7 +181,7 @@
   </div>
 </section>
 
-      <section class="figures">
+      <section class="figures" id="about">
   <div class="container">
     <div class="figures__header">
       <h2 class="title2 figures__title">Несколько цифр о нашей работе</h2>
@@ -226,7 +226,7 @@
   </div>
 </section>
 
-      <section class="equip">
+      <section class="equip" id="products">
   <div class="container">
     <h2 class="equip__title title2 title2--white">Примеры оборудования для разных бюджетов и концепций кибер-клубов</h2>
     <div class="equip__slider swiper">
@@ -266,9 +266,9 @@
               Бюджет всего клуба:
               <span>3 000 000 руб</span>
             </div>
-            <a href="#" class="equip__btn glow-on-hover">
+            <button class="btn-reset modal-btn equip__btn glow-on-hover" data-text="Привет! Хочу просчитать компьютеры и оборудование для клуба.">
               <span>Просчитать похожий состав оборудования</span>
-            </a>
+            </button>
           </div>
         </div>
         <div class="equip__item swiper-slide">
@@ -306,9 +306,9 @@
               Бюджет всего клуба:
               <span>3 000 000 руб</span>
             </div>
-            <a href="#" class="equip__btn glow-on-hover">
+            <button class="btn-reset modal-btn equip__btn glow-on-hover" data-text="Привет! Хочу просчитать компьютеры и оборудование для клуба.">
               <span>Просчитать похожий состав оборудования</span>
-            </a>
+            </button>
           </div>
         </div>
         <div class="equip__item swiper-slide">
@@ -346,9 +346,9 @@
               Бюджет всего клуба:
               <span>3 000 000 руб</span>
             </div>
-            <a href="#" class="equip__btn glow-on-hover">
+            <button class="btn-reset modal-btn equip__btn glow-on-hover" data-text="Привет! Хочу просчитать компьютеры и оборудование для клуба.">
               <span>Просчитать похожий состав оборудования</span>
-            </a>
+            </button>
           </div>
         </div>
         <div class="equip__item swiper-slide">
@@ -386,9 +386,9 @@
               Бюджет всего клуба:
               <span>3 000 000 руб</span>
             </div>
-            <a href="#" class="equip__btn glow-on-hover">
+            <button class="btn-reset modal-btn equip__btn glow-on-hover" data-text="Привет! Хочу просчитать компьютеры и оборудование для клуба.">
               <span>Просчитать похожий состав оборудования</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -397,7 +397,7 @@
   </div>
 </section>
 
-      <section class="clubs">
+      <section class="clubs" id="cases">
   <div class="container">
     <div class="figures__header">
       <h2 class="title2 clubs__title">Компьютерные клубы с нашим оборудованием</h2>
@@ -722,7 +722,7 @@
   </div>
 </section>
 
-      <section class="socials">
+      <section class="socials" id="contacts">
   <div class="container">
     <h2 class="title2 title2--white socials__title">
       Подписывайся на нас
@@ -909,19 +909,19 @@
     <nav class="footer__nav nav">
       <ul class="list-reset nav__list">
         <li class="nav__item">
-          <a href="#" class="nav__link">Меню</a>
+          <a class="nav__link">Меню</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Продукты</a>
+          <a href="#products" class="nav__link">Продукты</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Кейсы</a>
+          <a href="#cases" class="nav__link">Кейсы</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">О компании</a>
+          <a href="#about" class="nav__link">О компании</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Контакты</a>
+          <a href="#contacts" class="nav__link">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -950,7 +950,7 @@
       </ul>
     </address>
 
-    <button class="btn-reset header__cta footer__btn">Записаться на консультацию со мной</button>
+    <button class="btn-reset header__cta footer__btn modal-btn" data-text="Привет! Хочу записаться на онлайн-консультацию.">Записаться на консультацию со мной</button>
   </div>
 </footer>
 
